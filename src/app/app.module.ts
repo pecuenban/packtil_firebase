@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import {DemoMaterialModule} from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -12,9 +13,10 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { NewJuegoComponent } from './new-juego/new-juego.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
 import { BotonPanicoComponent } from './boton-panico/boton-panico.component';
+import { JuegosService } from './juegos.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,
+  imports:      [ BrowserModule,HttpClientModule, FormsModule,
     DemoMaterialModule,BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: BuscarJuegoComponent },
@@ -27,6 +29,7 @@ import { BotonPanicoComponent } from './boton-panico/boton-panico.component';
       
     ]) ],
   declarations: [ AppComponent, BuscarJuegoComponent, PerfilComponent, NewJuegoComponent, FavoritosComponent, BotonPanicoComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [JuegosService]
 })
 export class AppModule { }

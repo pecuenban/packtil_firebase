@@ -21,11 +21,12 @@ body, my-app,.mat-drawer-container {
 .mat-card-avatar{
     overflow: hidden;
 }
-mat-card {
-    margin: 15px 5px;
-    display: inline-block!important;
+mat-card-actions.mat-card-actions {
+    text-align: right;
 }
 mat-card {
+    margin: 10px 5px;
+    display: inline-block!important;
     width: calc(100% / 4 - 42px);
 }
 @media screen and (max-width: 1024px){
