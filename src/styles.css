@@ -15,3 +15,32 @@ body, my-app,.mat-drawer-container {
 *{
   outline: none;
 }
+.mat-card-avatar img {
+    width: 100%;
+}
+.mat-card-avatar{
+    overflow: hidden;
+}
+mat-card {
+    margin: 15px 5px;
+    display: inline-block!important;
+}
+mat-card {
+    width: calc(100% / 4 - 42px);
+}
+@media screen and (max-width: 1024px){
+mat-card {
+    width: calc(100% / 3 - 42px);
+}
+}
+@media screen and (max-width: 768px){
+mat-card {
+    width: calc(100% / 2 - 42px);
+}
+}
+
+@media screen and (max-width: 425px){
+mat-card {
+  width: calc(100% - 42px);
+}
+}
