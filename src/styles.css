@@ -1,0 +1,17 @@
+/* Add application styles & imports to this file! */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+body{
+  margin:0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-drawer-container{
+  background: white;
+}
+body, my-app,.mat-drawer-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+*{
+  outline: none;
+}

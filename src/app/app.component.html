@@ -1,0 +1,27 @@
+
+<mat-sidenav-container class="example-container">
+<mat-sidenav #sidenav mode="push">
+  <div class="cabecera_menu">
+    <span>Packtil</span>
+  </div>
+    <mat-list>
+ <mat-list-item matRipple [routerLink]="['/buscar']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">search</mat-icon> Buscar Juego</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/perfil']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">person</mat-icon> Perfil</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/favoritos']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">favorite</mat-icon> Favoritos</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/new_juego']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">add</mat-icon> Crear Juego</mat-list-item>
+ <mat-list-item matRipple *ngIf="!dark" (click)="cambioTema()"><mat-icon class="icon-menu">nights_stay</mat-icon> Oscuro</mat-list-item>
+ <mat-list-item matRipple *ngIf="dark" (click)="cambioTema()"><mat-icon class="icon-menu">wb_sunny</mat-icon> Claro</mat-list-item>
+</mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary"><mat-icon (click)="sidenav.toggle()" class="icon-menu">menu</mat-icon>Packtil</mat-toolbar>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+    <button mat-fab color="accent" class="destacado" [routerLink]="['/panico']">
+          <mat-icon>warning</mat-icon>
+        </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
