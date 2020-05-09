@@ -5,7 +5,7 @@ import { HttpClientModule }    from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import {DemoMaterialModule} from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {APP_BASE_HREF} from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { BuscarJuegoComponent } from './buscar-juego/buscar-juego.component';
@@ -30,6 +30,6 @@ import { JuegosService } from './juegos.service';
     ]) ],
   declarations: [ AppComponent, BuscarJuegoComponent, PerfilComponent, NewJuegoComponent, FavoritosComponent, BotonPanicoComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [JuegosService]
+  providers: [JuegosService,{provide: APP_BASE_HREF, useValue : '/' }]
 })
 export class AppModule { }
