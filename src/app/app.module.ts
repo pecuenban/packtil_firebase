@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { HttpClientModule }    from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import {DemoMaterialModule} from './material-module';
@@ -16,7 +16,7 @@ import { BotonPanicoComponent } from './boton-panico/boton-panico.component';
 import { JuegosService } from './juegos.service';
 
 @NgModule({
-  imports:      [ BrowserModule,HttpClientModule, FormsModule,
+  imports:      [ BrowserModule,HttpClientModule, FormsModule,ReactiveFormsModule ,
     DemoMaterialModule,BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: BuscarJuegoComponent },

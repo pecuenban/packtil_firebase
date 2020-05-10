@@ -2,27 +2,38 @@
   <mat-card-header>
 <mat-card-title>Nuevo Juego</mat-card-title>
   </mat-card-header>
-<form class="example-form">
+<form class="example-form" [formGroup]="formularioJuego" (ngSubmit)="onSubmit()" >
   <mat-form-field class="example-full-width">
     <mat-label>Nombre</mat-label>
-    <input matInput>
+    <input matInput
+formControlName="nombre"
+type="text"
+[(ngModel)]="juego.nombre">
   </mat-form-field>
 
    <mat-form-field class="example-full-width">
     <mat-label>Autor</mat-label>
-    <input matInput>
+    <input matInput
+formControlName="autor"
+type="text"
+[(ngModel)]="juego.autor">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Descripción corta</mat-label>
-    <textarea matInput></textarea>
+    <textarea matInput
+formControlName="descripcion_corta"
+type="text"
+[(ngModel)]="juego.descripcion_corta"></textarea>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
     <mat-label>Descripción</mat-label>
-    <textarea matInput></textarea>
+    <textarea matInput
+formControlName="descripcion"
+type="text"
+[(ngModel)]="juego.descripcion"></textarea>
   </mat-form-field>
-
-    <button mat-raised-button color="primary">Crear Juego</button>
+    <button mat-raised-button color="primary" [disabled]="!formularioJuego.valid">Crear Juego</button>
 </form>
 </mat-card>
