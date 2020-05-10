@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import {DemoMaterialModule} from './material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {APP_BASE_HREF} from '@angular/common';
+import { NgxMasonryModule } from 'ngx-masonry';
 
 import { AppComponent } from './app.component';
 import { BuscarJuegoComponent } from './buscar-juego/buscar-juego.component';
@@ -16,7 +17,7 @@ import { BotonPanicoComponent } from './boton-panico/boton-panico.component';
 import { JuegosService } from './juegos.service';
 
 @NgModule({
-  imports:      [ BrowserModule,HttpClientModule, FormsModule,ReactiveFormsModule ,
+  imports:      [ BrowserModule,HttpClientModule, FormsModule,ReactiveFormsModule ,NgxMasonryModule,
     DemoMaterialModule,BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: BuscarJuegoComponent },

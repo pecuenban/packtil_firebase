@@ -1,7 +1,7 @@
 <mat-card>Buscar Juego</mat-card><br>
-<div>
+<ngx-masonry>
 <ng-container *ngFor="let juego of juegos">
-<mat-card *ngIf="juego.publicado">
+<mat-card *ngIf="juego.publicado" ngxMasonryItem>
   <mat-card-header>
     <div mat-card-avatar><img src="https://scontent-mad1-1.xx.fbcdn.net/v/t31.0-1/p200x200/1622567_1506452986292494_4338430501214219772_o.png?_nc_cat=107&_nc_sid=dbb9e7&_nc_ohc=a_cv9BdjsC0AX-37hPB&_nc_ht=scontent-mad1-1.xx&oh=38d7a5e53245a5c9191900a287991c75&oe=5EDE4DBE"></div>
     <mat-card-title>{{juego.nombre}}</mat-card-title>
@@ -19,4 +19,4 @@
   </mat-card-actions>
 </mat-card>
 </ng-container>
-</div>
+</ngx-masonry>
