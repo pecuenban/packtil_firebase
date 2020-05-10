@@ -37,13 +37,10 @@ formularioJuego = new FormGroup({
     console.error(error);
   }
   respuesta(data) {
-    if (data.status == "200") {
+    
       console.log(data);
       this.router.navigate(["/buscar"]);
-    } else {
-      alert("Error");
-      console.log(data);
-    }
+    
     //this.propagar.emit(false);
   }
 
