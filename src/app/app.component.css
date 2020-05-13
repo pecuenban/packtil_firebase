@@ -1,4 +1,3 @@
-@import '../packtil';
 p {
   font-family: Lato;
 }
@@ -45,7 +44,7 @@ mat-toolbar#bottom mat-icon {
     border-top: solid;
     height: 100%;
     line-height: 58px;
-    color: $candy-app-primary;
+    color: red;
 }
 mat-toolbar#bottom mat-icon:not(.active) {
     border-color: transparent;
