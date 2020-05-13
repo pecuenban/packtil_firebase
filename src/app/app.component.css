@@ -44,7 +44,7 @@ mat-toolbar#bottom mat-icon {
     border-top: solid;
     height: 100%;
     line-height: 58px;
-    color: red;
+    color: #2196f3;
 }
 mat-toolbar#bottom mat-icon:not(.active) {
     border-color: transparent;
