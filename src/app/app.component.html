@@ -14,13 +14,19 @@
 </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary"><mat-icon (click)="sidenav.toggle()" class="icon-menu">menu</mat-icon>Packtil</mat-toolbar>
+    <mat-toolbar><mat-icon (click)="sidenav.toggle()" class="icon-menu">menu</mat-icon>Packtil</mat-toolbar>
     <div class="container">
       <router-outlet></router-outlet>
     </div>
     <button mat-fab color="accent" class="destacado" [routerLink]="['/panico']">
           <mat-icon>warning</mat-icon>
         </button>
+    <mat-toolbar id="bottom">
+      <mat-icon matRipple routerLinkActive="active" [routerLink]="['/buscar']" >search</mat-icon>
+      <mat-icon matRipple routerLinkActive="active" [routerLink]="['/perfil']" >person</mat-icon>
+      <mat-icon matRipple routerLinkActive="active" [routerLink]="['/favoritos']" >favorite</mat-icon>
+      <mat-icon matRipple routerLinkActive="active" [routerLink]="['/new_juego']" >add</mat-icon>
+    </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>
 

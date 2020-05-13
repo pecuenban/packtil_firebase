@@ -1,3 +1,4 @@
+@import '../packtil';
 p {
   font-family: Lato;
 }
@@ -14,7 +15,7 @@ p {
 }
 .destacado{
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   right: 15px;
 }
 mat-toolbar {
@@ -26,11 +27,33 @@ mat-toolbar {
     padding-top: 65px;
 }
 .cabecera_menu {
-    width: 300px;
-    height: 150px;
+   width: 300px;
     padding: 25px;
-    background: #ff5252;
-    color:white;
+    border-bottom: solid 2px;
+    font-size: 15pt;
+}
+/*bar bottom*/
+
+#bottom{
+  position:fixed;
+  bottom: 0px;
+  display: none;
+}
+mat-toolbar#bottom mat-icon {
+    width: 25%;
+    text-align: center;
+    border-top: solid;
+    height: 100%;
+    line-height: 58px;
+    color: ($candy-app-primary);
+}
+mat-toolbar#bottom mat-icon:not(.active) {
+    border-color: transparent;
+}
+@media screen and (max-width: 768px){
+#bottom{
+  display: block;
+}
 }
 @media screen and (max-width: 425px){
 .cabecera_menu {
