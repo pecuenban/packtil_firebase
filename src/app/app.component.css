@@ -14,8 +14,9 @@ p {
 }
 .destacado{
   position: fixed;
-  bottom: 70px;
+  bottom: 20px;
   right: 15px;
+  transition: bottom 0.5s;
 }
 mat-toolbar {
     position: fixed;
@@ -35,8 +36,8 @@ mat-toolbar {
 
 #bottom{
   position:fixed;
-  bottom: 0px;
-  display: none;
+  bottom: -80px;
+  transition: bottom 0.5s;
 }
 mat-toolbar#bottom mat-icon {
     width: 25%;
@@ -51,7 +52,10 @@ mat-toolbar#bottom mat-icon:not(.active) {
 }
 @media screen and (max-width: 768px){
 #bottom{
-  display: block;
+  bottom: 0px;
+}
+.destacado{
+  bottom: 70px;
 }
 }
 @media screen and (max-width: 425px){
