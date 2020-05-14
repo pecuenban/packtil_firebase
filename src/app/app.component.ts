@@ -26,7 +26,7 @@ export class AppComponent {
   }
   ngOnInit() {
     this.innerWidth = window.innerWidth;
-    if (this.innerWidth < 768) {
+    if (this.innerWidth >= 768) {
       this.mode = "side";
     } else {
       this.mode = "push";
