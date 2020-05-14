@@ -12,6 +12,7 @@ export class AppComponent {
     //  overlayContainer.getContainerElement().classList.add('packtil-dark-theme');
   }
   innerWidth;
+  opened:boolean;
   mode = "";
   dark: boolean;
   @HostListener("window:resize", ["$event"])
@@ -19,6 +20,7 @@ export class AppComponent {
     this.innerWidth = window.innerWidth;
     if (this.innerWidth >= 768) {
       this.mode = "side";
+    this.opened = true;
     } else {
       this.mode = "push";
     }
@@ -28,8 +30,10 @@ export class AppComponent {
     this.innerWidth = window.innerWidth;
     if (this.innerWidth >= 768) {
       this.mode = "side";
+    this.opened = true;
     } else {
       this.mode = "push";
+    this.opened = false;
     }
     if (localStorage.getItem("dark") == "true") {
       this.dark = true;

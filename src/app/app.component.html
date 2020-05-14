@@ -1,6 +1,6 @@
 
 <mat-sidenav-container class="example-container">
-<mat-sidenav #sidenav [mode]="mode">
+<mat-sidenav #sidenav [mode]="mode" [(opened)]="opened" >
   <div class="cabecera_menu">
     <span>Packtil</span>
   </div>
@@ -14,7 +14,7 @@
 </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar><mat-icon (click)="sidenav.toggle()" class="icon-menu">menu</mat-icon>Packtil</mat-toolbar>
+    <mat-toolbar> <ng-container *ngIf="!(innerWidth >= 768)"> <mat-icon (click)="sidenav.toggle()" class="icon-menu">menu</mat-icon>Packtil</ng-container></mat-toolbar>
     <div class="container">
       <router-outlet></router-outlet>
     </div>
