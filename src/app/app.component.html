@@ -5,10 +5,10 @@
     <span>Packtil</span>
   </div>
     <mat-list>
- <mat-list-item matRipple [routerLink]="['/buscar']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">search</mat-icon> Buscar Juego</mat-list-item>
- <mat-list-item matRipple [routerLink]="['/perfil']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">person</mat-icon> Perfil</mat-list-item>
- <mat-list-item matRipple [routerLink]="['/favoritos']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">favorite</mat-icon> Favoritos</mat-list-item>
- <mat-list-item matRipple [routerLink]="['/new_juego']" (click)="sidenav.toggle()"><mat-icon class="icon-menu">add</mat-icon> Crear Juego</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/buscar']" (click)="cerrar()"><mat-icon class="icon-menu">search</mat-icon> Buscar Juego</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/perfil']" (click)="cerrar()"><mat-icon class="icon-menu">person</mat-icon> Perfil</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/favoritos']" (click)="cerrar()"><mat-icon class="icon-menu">favorite</mat-icon> Favoritos</mat-list-item>
+ <mat-list-item matRipple [routerLink]="['/new_juego']" (click)="cerrar()"><mat-icon class="icon-menu">add</mat-icon> Crear Juego</mat-list-item>
  <mat-list-item matRipple *ngIf="!dark" (click)="cambioTema()"><mat-icon class="icon-menu">nights_stay</mat-icon> Oscuro</mat-list-item>
  <mat-list-item matRipple *ngIf="dark" (click)="cambioTema()"><mat-icon class="icon-menu">wb_sunny</mat-icon> Claro</mat-list-item>
 </mat-list>

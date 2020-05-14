@@ -42,7 +42,11 @@ export class AppComponent {
       this.dark = false;
     }
   }
-
+cerrar(){
+  if (this.innerWidth < 768) {
+    this.opened = false;
+}
+}
   cambioTema() {
     this.dark = !this.dark;
     if (this.dark) {
